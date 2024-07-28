@@ -1,0 +1,439 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    perspective: 600px;
+}
+header{
+    height: 150px;
+    width: 80%;
+    padding-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+header figure {
+    flex: 1 0;
+}
+ nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 15 0;
+ }
+ nav ul {
+    list-style: none;
+ }
+ ul li {
+    display: inline-block;
+    line-height: 40px;
+ }
+ ul li a {
+    text-decoration: none;
+    position: relative;
+    font-size: 17px;
+    color: gray;
+    margin-left: 35px;
+    padding: 10px;
+ }
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+nav ul li a:hover::before{
+    width: 103%;
+    height: 100%;
+    transition: 0.5s;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    bottom: 0;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 0.5s;
+}
+.header-info {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    font-size: 28px;
+    flex: 5 0;
+}
+.table-hover{
+    height: 200px;
+    width: 350px;
+    border: 2px solid black;
+    background-color: #ffff;
+    color: gray;
+    line-height: 32px;
+    padding: 10px;
+    font-size: 17px;
+    position: absolute;
+    transform: scale(0,0);
+}
+.table1:hover .table-hover{
+    transform: scale(1,1);
+    transition: 0.5s;
+}
+.ttd{
+    text-decoration: underline dotted;
+}
+.table-hover table tr td{
+    padding-left: 25px;
+}
+.cart {
+    height: 20px;
+    border-radius: 50%;
+    background-color: brown;
+    font-size: 14px;
+    color: #ffff;
+    padding: 2px;
+    align-self: center;
+}
+.header-info i {
+    margin-left: 20px;
+}
+.header-info .your-bag{
+    font-size: 18px;
+}
+/*///////////////////////////////////////////////////////////////////*/
+main{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+}
+.home{
+    height: 100%;
+    width: 100%;
+    background:radial-gradient(closest-corner at 70% 80%,#ffff,rgb(144, 143, 143),rgb(170, 169, 169),gray) ;
+    padding: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.home1{
+    width: 40%;
+    flex: 1 1;
+}
+.home1 h2{
+    color: #ffff;
+    font-size: 63px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+}
+.shop-now{
+    height: 30px;
+    width: 100px;
+    background-color: #ffff;
+    margin-top: 50px;
+    border: 0;
+}
+.home figure{
+    width: 60%;
+    transform: translatey(-50px);
+    flex: 1 1;
+} 
+/*////////////////////*/
+.category{
+    width: 80%;
+    height: 65vh;
+    margin: auto;
+}
+.hhcatagory{
+    padding-top: 30px;
+    height: 100px;
+}
+.hcatagory{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(145, 111, 89);
+    padding-bottom: 10px;
+}
+.line1{
+    height: 2px;
+    width: 100px;
+    background-color: rgb(145, 111, 89);
+    margin: auto;
+    transition: 1s;
+}
+.hhcatagory:hover .line1{
+    width: 150px;
+}
+.category-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.category-items{
+    width: 24.5%;
+}
+.category-img img{
+    width: 100%;
+    height: 300px;
+}
+.category-p{
+    color: gray;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.category-info{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.s-info{
+    background-color: brown;
+    color: #ffff;
+    margin-left: auto;
+    padding: 8px;
+    visibility: hidden;
+}
+.category-items:hover .s-info{
+    visibility: visible;
+}
+.c-info{
+    font-size: 18px;
+}
+/*////////////////////////////////////////////////////*/
+.section2{
+    width: 80%;
+    height: 40vh;
+    margin: auto;
+}
+.discount{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.marketing{
+    width: 49%;
+    height: 300px;
+    background-color: rgb(248, 238, 231);
+    padding: 20px;
+}
+.marketing i{
+    color: rgb(157, 109, 78);
+    font-size: 50px;
+    float: left;
+}
+.mark-info{
+    float: left;
+    padding-left: 5px;
+}
+.This{
+    margin-top: 70px;
+    line-height: 25px;
+    font-size: 16px;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
+}
+.pinfo{
+    font-size: 26px;
+}
+.pinfo1{
+    color: rgb(145, 111, 89);
+}
+.dis1{
+    width: 24%;
+    height: 300px;
+    background-image: url(../images/fram.jpeg);
+    background-size: cover;
+    padding: 20px 15px;
+    transition: 0.5s;
+}
+.dis2{
+    width: 24%;
+    height: 300px;
+    background-image: url(../images/best.jpeg);
+    background-size: cover;
+    padding: 20px 15px;
+    transition: 0.5s;
+}
+.pdis1{
+    color: rgb(95, 56, 30);
+    font-size: 20px;
+}
+.pdis2{
+    font-size: 25px;
+}
+.dis2:hover{
+    transform: scale(1.05, 1.05);
+}
+.dis1:hover {
+    transform: scale(1.05, 1.05);
+}
+.line2{
+    width: 50px;
+    height: 3px;
+    background-color: rgb(157, 109, 78);
+    margin-top: 70px;
+    margin-left: 350px;
+}
+.line3 {
+    width: 50px;
+    height: 3px;
+    background-color: rgb(157, 109, 78);
+    margin-top: -3px;
+    margin-left: 420px;
+}
+.line4 {
+    width: 50px;
+    height: 3px;
+    background-color: rgb(157, 109, 78);
+    margin-top: -3px;
+    margin-left: 490px;
+}
+/*////////////////////////////////////////////////////*/
+.icons{
+    height: 20vh;
+    margin: auto;
+    width: 80%;
+}
+.icon-contanier{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    grid-column-gap: 20px;
+    padding-top: 40px;
+}
+.icon-contanier div{
+    text-align: center;
+    line-height: 25px;
+    overflow: hidden;
+}
+.icon-contanier i{
+    font-size: 40px;
+    color: gray;
+}
+.icon-contanier div:hover i{
+    color: rgb(157, 109, 78);
+    animation: icon-change 0.3s normal 0s 1 ;
+}
+@keyframes icon-change{
+    0%{
+        transform: translatey(0);
+    }
+    100%{
+        transform: translatey(-60px);
+    }
+}
+.icon-contanier p{
+    color: gray;
+}
+.icon-contanier h2{
+    font-size: 18px;
+}
+hr{
+    width: 80%;
+    margin: auto;
+    height: 2px;
+    background-color:rgb(157, 109, 78) ;
+}
+.icon1,.icon2,.icon3,.icon4{
+    border-right: 2px solid rgb(157, 109, 78);
+}
+/*/////////////////////////////////*/
+.card{
+    width: 80%;
+    margin: auto;
+}
+.card-head{
+    width: 100%;
+    height: 90px;
+    margin-top: 70px;
+}
+.hcard{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(145, 111, 89);
+    padding-bottom: 10px;
+}
+.line6{
+    height: 2px;
+    width: 100px;
+    background-color: rgb(145, 111, 89);
+    margin: auto;
+    transition: 1s;
+}
+.card-head:hover .line6 {
+    width: 150px;
+}
+.span-head{
+    margin-left: 250px;
+}
+.span-head span{
+    margin-left: 40px;
+    font-size: 18px;
+}
+.card-body{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(2,380px);
+    grid-gap: 40px;
+    padding-top: 40px;
+}
+.thecard{
+    position: relative;
+    transform-style: preserve-3d;
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: 5;
+    backface-visibility: hidden;
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    transform: rotateY(180deg);
+}
+.thecard:hover{
+    transform: rotatey(180deg);
+    transition: 1s;
+}
+.stars{
+    margin-top: 320px;
+}
+.front img,.back img{
+    width: 100%;
+    height: 300px;
+}
+.stars .fas{
+    color: gold;
+}
+.icon-card{
+    position: absolute;
+    margin-top: -180px;
+    margin-left: 100px;
+}
+.icon-card i{
+    color: rgb(145, 111, 89);
+    margin-left: 10px;
+    font-size: 40px;
+}
+/*////////////////////////////////////////////*/
